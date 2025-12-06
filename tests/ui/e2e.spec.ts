@@ -12,7 +12,6 @@ test.beforeEach(async ({ page }) => {
 
 test('apply for loan e2e', async ({ page }) => {
     const loginPage = new LoginPage(page);
-    const applyPage = new ApplyPage(page);
     const loanDetailsPage = new LoanDetailsPage(page);
     await applyPage.applyNow();
     await expect (loginPage.continueButton).toBeDisabled();
